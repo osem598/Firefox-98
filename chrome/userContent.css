@@ -1,0 +1,37 @@
+@-moz-document url-prefix(about:home), url-prefix(about:newtab) {
+	.logo {
+		background: url(ff-std.svg) no-repeat center !important;
+	}
+	.search-handoff-button{
+		border-radius: 0px !important;
+		box-shadow: inset -1px -1px #fff,inset 1px 1px grey,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a !important;
+	}
+	.tile{
+		border-radius: 0px !important;
+		box-shadow: inset -1px -1px #fff,inset 1px 1px grey,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a !important;
+	}
+	.card{
+		border-radius: 0px !important;
+		box-shadow: inset -1px -1px #fff,inset 1px 1px grey,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a !important;
+	}
+	body{
+		/* background-color could also be set to #c9c9c9 for a more period-correct color.*/ 
+		background-color: #E5E5E5 !important;
+		box-shadow:inset -1px -1px #fff,inset 1px 1px grey,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a !important;
+	}
+	.card-preview-image-outer{
+		border-radius: 0px !important;
+		box-shadow:inset -1px -1px #fff,inset 1px 1px grey,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a !important;
+		padding:2px !important;
+	}
+	.card-details{
+		box-shadow: inset -1px -1px #fff,inset 1px 1px grey,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a  !important;
+	}
+	.card-context{
+	visibility: hidden !important;	
+	}
+	.top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover){
+		border-radius: 0px;
+	}
+}
+
