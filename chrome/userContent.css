@@ -3,7 +3,7 @@
 :root{
 	--95grey:#c9c9c9;
 	--95concave:inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf;
-	--95convex:inset -1px -1px #fff,inset 1px 1px grey,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a
+	--95convex:inset -1px -1px #fff,inset 1px 1px grey,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a;
 }
 
 @-moz-document url-prefix(about:home), url-prefix(about:newtab) {
