@@ -1,9 +1,30 @@
 /* To make color changes, change the variables in both the userChrome AND userContent files */
 
 :root{
+/* NORMAL BROWSING COLORS */
 	--95grey:#c9c9c9;
-	--95concave:inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf;
-	--95convex:inset -1px -1px #fff,inset 1px 1px grey,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a;
+	--home-bground:#E5E5E5;
+	--3d-darkest:#0a0a0a;
+	--3d-dark:#808080;
+	--3d-light:#dfdfdf;
+	--3d-lightest:#ffffff;
+	
+/* Defines the 3d effect in normal browsing. */
+	--95convex:inset -1px -1px var(--3d-darkest),inset 1px 1px var(--3d-lightest),inset -2px -2px var(--3d-dark),inset 2px 2px var(--3d-light);
+	--95concave:inset -1px -1px var(--3d-lightest),inset 1px 1px var(--3d-dark),inset -2px -2px var(--3d-light),inset 2px 2px var(--3d-darkest);
+
+
+/* PRIVATE BROWSING COLORS */
+	--pb95grey:#c9c9c9;
+	--pb-home-bground:#E5E5E5;
+	--pb-3d-darkest:#0a0a0a;
+	--pb-3d-dark:#808080;
+	--pb-3d-light:#dfdfdf;
+	--pb-3d-lightest:#ffffff;
+
+/* Defines the 3d effect in private browsing. */
+	--pb-95convex:inset -1px -1px var(--pb-3d-darkest),inset 1px 1px var(--pb-3d-lightest),inset -2px -2px var(--pb-3d-dark),inset 2px 2px var(--pb-3d-light);
+	--pb-95concave:inset -1px -1px var(--pb-3d-lightest),inset 1px 1px var(--pb-3d-dark),inset -2px -2px var(--pb-3d-light),inset 2px 2px var(--pb-3d-darkest);
 }
 
 
@@ -22,7 +43,7 @@
     background-color: var(--95grey) !important;
 }
 .tab-background[selected]{
- 	box-shadow: var(--95concave)  !important;
+ 	box-shadow: var(--95convex)  !important;
 	border-radius:0 !important;
     background-color: var(--95grey) !important;
     background-image: none !important;
@@ -44,7 +65,7 @@
     outline: none !important;
     border:none !important;
     border-radius: 0px !important;
-    box-shadow: var(--95convex) !important;
+    box-shadow: var(--95concave) !important;
 }
 #urlbar[focused="true"]:not([suppress-focus-border]) > #urlbar-background, #searchbar:focus-within{
     border:1px solid #000080 !important;
@@ -67,8 +88,8 @@
 }
 .PanelUI-subView{
     background-color: var(--95grey) !important;
-    box-shadow: var(--95concave) !important;
-    color: black;
+    box-shadow: var(--95convex) !important;
+   /* color: black; */
 }
 .cui-widget-panel, .panel-no-padding{
     --panel-border-radius: 0px !important;

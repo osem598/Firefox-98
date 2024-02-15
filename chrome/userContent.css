@@ -1,9 +1,30 @@
 /* To make color changes, change the variables in both the userChrome AND userContent files */
 
 :root{
+/* NORMAL BROWSING COLORS */
 	--95grey:#c9c9c9;
-	--95concave:inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf;
-	--95convex:inset -1px -1px #fff,inset 1px 1px grey,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a;
+	--home-bground:#E5E5E5;
+	--3d-darkest:#0a0a0a;
+	--3d-dark:#808080;
+	--3d-light:#dfdfdf;
+	--3d-lightest:#ffffff;
+	
+/* Defines the 3d effect in normal browsing. */
+	--95convex:inset -1px -1px var(--3d-darkest),inset 1px 1px var(--3d-lightest),inset -2px -2px var(--3d-dark),inset 2px 2px var(--3d-light);
+	--95concave:inset -1px -1px var(--3d-lightest),inset 1px 1px var(--3d-dark),inset -2px -2px var(--3d-light),inset 2px 2px var(--3d-darkest);
+
+
+/* PRIVATE BROWSING COLORS */
+	--pb95grey:#c9c9c9;
+	--pb-home-bground:#E5E5E5;
+	--pb-3d-darkest:#0a0a0a;
+	--pb-3d-dark:#808080;
+	--pb-3d-light:#dfdfdf;
+	--pb-3d-lightest:#ffffff;
+
+/* Defines the 3d effect in private browsing. */
+	--pb-95convex:inset -1px -1px var(--pb-3d-darkest),inset 1px 1px var(--pb-3d-lightest),inset -2px -2px var(--pb-3d-dark),inset 2px 2px var(--pb-3d-light);
+	--pb-95concave:inset -1px -1px var(--pb-3d-lightest),inset 1px 1px var(--pb-3d-dark),inset -2px -2px var(--pb-3d-light),inset 2px 2px var(--pb-3d-darkest);
 }
 
 @-moz-document url-prefix(about:home), url-prefix(about:newtab) {
@@ -12,28 +33,28 @@
 	}
 	.search-handoff-button{
 		border-radius: 0px !important;
-		box-shadow: var(--95convex) !important;
+		box-shadow: var(--95concave) !important;
+		border: none !important;
 	}
 	.tile{
 		border-radius: 0px !important;
-		box-shadow: var(--95convex) !important;
+		box-shadow: var(--95concave) !important;
 	}
 	.card{
 		border-radius: 0px !important;
-		box-shadow: var(--95convex) !important;
+		box-shadow: var(--95concave) !important;
 	}
-	body{
-		/* background-color could also be set to 95grey for a more period-correct color.*/ 
-		background-color: #E5E5E5 !important;
-		box-shadow:var(--95convex) !important;
+	body{ 
+		background-color:var(--home-bground) !important;
+		box-shadow:var(--95concave) !important;
 	}
 	.card-preview-image-outer{
 		border-radius: 0px !important;
-		box-shadow:var(--95convex) !important;
+		box-shadow:var(--95concave) !important;
 		padding:2px !important;
 	}
 	.card-details{
-		box-shadow: var(--95convex)  !important;
+		box-shadow: var(--95concave)  !important;
 	}
 	.card-context{
 	visibility: hidden !important;	
