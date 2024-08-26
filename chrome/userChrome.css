@@ -8,6 +8,8 @@
 	--3d-dark:#808080;
 	--3d-light:#dfdfdf;
 	--3d-lightest:#ffffff;
+	--urlbar-bg:#ffffff;
+	--button-colour:#0a0a0a;
 	
 /* Defines the 3d effect in normal browsing. */
 	--95convex:inset -1px -1px var(--3d-darkest),inset 1px 1px var(--3d-lightest),inset -2px -2px var(--3d-dark),inset 2px 2px var(--3d-light);
@@ -21,6 +23,8 @@
 	--pb-3d-dark:#808080;
 	--pb-3d-light:#dfdfdf;
 	--pb-3d-lightest:#ffffff;
+	--pb-urlbar-bg:#ffffff;
+	--pb-button-colour:#000000;
 
 /* Defines the 3d effect in private browsing. */
 	--pb-95convex:inset -1px -1px var(--pb-3d-darkest),inset 1px 1px var(--pb-3d-lightest),inset -2px -2px var(--pb-3d-dark),inset 2px 2px var(--pb-3d-light);
@@ -29,13 +33,9 @@
 
 
 .tabbrowser-tab[label^="New Tab"] .tab-icon-image {
-      background: url(ff-std-alt.svg) !important;
-      background-repeat: no-repeat !important;
-      background-size: 16px !important;
-      margin-right: 3.5px !important;
-      padding-left: 16px !important;
-      width: 0 !important;
+      content: url("ff-std-alt.svg") !important;
 }
+
 #nav-bar:not([tabs-hidden="true"]) {
     box-shadow: 0px -1px 0px 0px grey !important;
 }
@@ -52,7 +52,7 @@
     border-radius: 0px !important;
 }
 .tab-content{
-    color: #0a0a0a !important;
+    color: var(--button-colour) !important;
 }
 
 #TabsToolbar .tabs-newtab-button:hover {
@@ -62,6 +62,7 @@
    border-radius:0 !important;
 }
 #urlbar-background{
+	background-color:var(--urlbar-bg) !important;
     outline: none !important;
     border:none !important;
     border-radius: 0px !important;
@@ -73,6 +74,7 @@
 .toolbarbutton-1{
     border-radius: 0px !important;
     color: #0a0a0a !important;
+    fill: var(--button-colour) !important;
 }
 .toolbarbutton-icon{
     border-radius: 0px !important;
