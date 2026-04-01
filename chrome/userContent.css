@@ -8,30 +8,32 @@
 	--3d-dark:#808080;
 	--3d-light:#dfdfdf;
 	--3d-lightest:#ffffff;
-	
-/* Defines the 3d effect in normal browsing. */
+	--urlbar-bg:#ffffff;
+	--button-colour:#0a0a0a;
+
+/* Defines the 3d effects. */
 	--95convex:inset -1px -1px var(--3d-darkest),inset 1px 1px var(--3d-lightest),inset -2px -2px var(--3d-dark),inset 2px 2px var(--3d-light);
 	--95concave:inset -1px -1px var(--3d-lightest),inset 1px 1px var(--3d-dark),inset -2px -2px var(--3d-light),inset 2px 2px var(--3d-darkest);
-
+	}
 
 /* PRIVATE BROWSING COLORS */
-	--pb95grey:#c9c9c9;
-	--pb-home-bground:#E5E5E5;
-	--pb-3d-darkest:#0a0a0a;
-	--pb-3d-dark:#808080;
-	--pb-3d-light:#dfdfdf;
-	--pb-3d-lightest:#ffffff;
-
-/* Defines the 3d effect in private browsing. */
-	--pb-95convex:inset -1px -1px var(--pb-3d-darkest),inset 1px 1px var(--pb-3d-lightest),inset -2px -2px var(--pb-3d-dark),inset 2px 2px var(--pb-3d-light);
-	--pb-95concave:inset -1px -1px var(--pb-3d-lightest),inset 1px 1px var(--pb-3d-dark),inset -2px -2px var(--pb-3d-light),inset 2px 2px var(--pb-3d-darkest);
-}
-
-@-moz-document url-prefix(about:home), url-prefix(about:newtab) {
-	.logo {
-		background: url(ff-std.svg) no-repeat center !important;
+@-moz-document url-prefix(about:privatebrowsing) {
+	:root{
+	--95grey:#937baf;
+	--home-bground:#937baf;
+	--3d-darkest:#0a0a0a;
+	--3d-dark:#4a3178;
+	--3d-light:#a893c0;
+	--3d-lightest:#ded6e8;
+	--urlbar-bg:#4a3178;
+	--button-colour:#ffffff;
+		}
 	}
+
+@-moz-document url-prefix(about:home), url-prefix(about:newtab), url-prefix(about:privatebrowsing) {
 	.search-handoff-button{
+		background-color: var(--urlbar-bg) !important;
+		color:var(--button-color) !important;
 		border-radius: 0px !important;
 		box-shadow: var(--95concave) !important;
 		border: none !important;
@@ -63,4 +65,13 @@
 		border-radius: 0px;
 	}
 }
-
+@-moz-document url-prefix(about:home), url-prefix(about:newtab){
+	.logo {
+		background: url(ff-std.svg) no-repeat center !important;
+	}	
+}
+@-moz-document url-prefix(about:privatebrowsing){
+	.logo {
+		background: url(ff-priv.svg) no-repeat center !important;
+	}		
+}
