@@ -1,6 +1,5 @@
-To change colors, replace the default text in both the userChrome.css and userContent.css files. for normal browsing colors, replace lines 5-12 in both files. for private browsing colors*, replace lines 20-27.
+To change colors, replace the default text in both the userChrome.css and userContent.css files. for normal browsing colors, replace lines 5-12 in both files. for private browsing colors, replace lines 22-29.
 
-*private browsing colors not yet implemented, current variables are place holders.
 *some colors are still controlled by themes. if things don't look right, check that you are using a theme that matches whatever css colors you are using (light for default, dark for dark, etc.)
 
 
