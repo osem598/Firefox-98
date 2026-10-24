@@ -1,0 +1,78 @@
+/* Dark variant of the Firefox-98 theme.
+   Same structure as userContent.css; only the color variables differ. */
+
+:root{
+/* NORMAL BROWSING COLORS (dark) */
+	--95grey:#3b3b3b;
+	--home-bground:#3b3b3b;
+	--3d-darkest:#000000;
+	--3d-dark:#272727;
+	--3d-light:#4c4c4c;
+	--3d-lightest:#9d9d9d;
+	--urlbar-bg:#272727;
+	--button-colour:#ffffff;
+
+/* Defines the 3d effects. */
+	--95convex:inset -1px -1px var(--3d-darkest),inset 1px 1px var(--3d-lightest),inset -2px -2px var(--3d-dark),inset 2px 2px var(--3d-light);
+	--95concave:inset -1px -1px var(--3d-lightest),inset 1px 1px var(--3d-dark),inset -2px -2px var(--3d-light),inset 2px 2px var(--3d-darkest);
+	}
+
+/* PRIVATE BROWSING COLORS (dark) */
+@-moz-document url-prefix(about:privatebrowsing) {
+	:root{
+	--95grey:#3a2b52;
+	--home-bground:#3a2b52;
+	--3d-darkest:#000000;
+	--3d-dark:#231a36;
+	--3d-light:#4a3178;
+	--3d-lightest:#9b8bc0;
+	--urlbar-bg:#2a2040;
+	--button-colour:#ffffff;
+		}
+	}
+
+@-moz-document url-prefix(about:home), url-prefix(about:newtab), url-prefix(about:privatebrowsing) {
+	.search-handoff-button{
+		background-color: var(--urlbar-bg) !important;
+		color:var(--button-color) !important;
+		border-radius: 0px !important;
+		box-shadow: var(--95concave) !important;
+		border: none !important;
+	}
+	.tile{
+		border-radius: 0px !important;
+		box-shadow: var(--95concave) !important;
+	}
+	.card{
+		border-radius: 0px !important;
+		box-shadow: var(--95concave) !important;
+	}
+	body{
+		background-color:var(--home-bground) !important;
+		box-shadow:var(--95concave) !important;
+	}
+	.card-preview-image-outer{
+		border-radius: 0px !important;
+		box-shadow:var(--95concave) !important;
+		padding:2px !important;
+	}
+	.card-details{
+		box-shadow: var(--95concave)  !important;
+	}
+	.card-context{
+	visibility: hidden !important;	
+	}
+	.top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover){
+		border-radius: 0px;
+	}
+}
+@-moz-document url-prefix(about:home), url-prefix(about:newtab){
+	.logo {
+		background: url(ff-std.svg) no-repeat center !important;
+	}	
+}
+@-moz-document url-prefix(about:privatebrowsing){
+	.logo {
+		background: url(ff-priv.svg) no-repeat center !important;
+	}		
+}

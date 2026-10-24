@@ -1,0 +1,106 @@
+/* Dark variant of the Firefox-98 theme.
+   Same structure as userChrome.css; only the color variables differ. */
+
+:root{
+/* NORMAL BROWSING COLORS (dark) */
+	--95grey:#3b3b3b;
+	--home-bground:#3b3b3b;
+	--3d-darkest:#000000;
+	--3d-dark:#272727;
+	--3d-light:#4c4c4c;
+	--3d-lightest:#9d9d9d;
+	--urlbar-bg:#272727;
+	--button-colour:#ffffff;
+
+
+/* Defines the 3d effects. */
+	--95convex:inset -1px -1px var(--3d-darkest),inset 1px 1px var(--3d-lightest),inset -2px -2px var(--3d-dark),inset 2px 2px var(--3d-light);
+	--95concave:inset -1px -1px var(--3d-lightest),inset 1px 1px var(--3d-dark),inset -2px -2px var(--3d-light),inset 2px 2px var(--3d-darkest);
+	}
+
+/* PRIVATE BROWSING COLORS (dark) */
+#main-window[privatebrowsingmode="temporary"]{
+	--95grey:#3a2b52;
+	--home-bground:#3a2b52;
+	--3d-darkest:#000000;
+	--3d-dark:#231a36;
+	--3d-light:#4a3178;
+	--3d-lightest:#9b8bc0;
+	--urlbar-bg:#2a2040;
+	--button-colour:#ffffff;
+	}
+
+
+
+
+.tabbrowser-tab[label^="New Tab"] .tab-icon-image {
+      content: url("ff-std-alt.svg") !important;
+}
+
+#nav-bar:not([tabs-hidden="true"]) {
+    box-shadow: 0px -1px 0px 0px grey !important;
+}
+.browser-toolbar{
+    background-color: var(--95grey) !important;
+}
+.tab-background[selected]{
+ 	box-shadow: var(--95convex)  !important;
+	border-radius:0 !important;
+    background-color: var(--95grey) !important;
+    background-image: none !important;
+}
+.tab-background{
+    border-radius: 0px !important;
+}
+.tab-content{
+    color: var(--button-colour) !important;
+}
+
+#TabsToolbar .tabs-newtab-button:hover {
+    border-radius:0 !important;
+}
+.tabs-newtab-button:hover .toolbarbutton-icon {
+   border-radius:0 !important;
+}
+#urlbar-background, #urlbar, .urlbar-background{
+	background-color:var(--urlbar-bg) !important;
+    outline: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    box-shadow: var(--95concave) !important;
+}
+#urlbar[focused="true"]:not([suppress-focus-border]) > #urlbar-background, #searchbar:focus-within{
+    border:1px solid #4c8dff !important;
+}
+.toolbarbutton-1{
+    border-radius: 0px !important;
+    color: var(--button-colour) !important;
+    fill: var(--button-colour) !important;
+}
+.toolbarbutton-icon{
+    border-radius: 0px !important;
+}
+.toolbarbutton-1 > .toolbarbutton-icon, toolbar .toolbarbutton-1 > .toolbarbutton-text, toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack{
+    border-radius: 0px !important;
+}
+.toolbarbutton-1:hover{
+    border-radius: 0px !important;
+}
+.toolbar-items{
+    background-color: var(--95grey) !important;
+}
+.PanelUI-subView{
+    background-color: var(--95grey) !important;
+    box-shadow: var(--95convex) !important;
+   /* color: black; */
+}
+.cui-widget-panel, .panel-no-padding{
+    --panel-border-radius: 0px !important;
+}
+
+.autoscroller {
+  background-image: size_all.png !important;
+}
+#urlbar-searchmode-switcher {
+	background-color: transparent !important;
+}
